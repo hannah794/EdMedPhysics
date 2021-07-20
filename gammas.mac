@@ -13,4 +13,4 @@
 /run/printProgress 100
 
 # One thousand protons will be generated
-/run/beamOn 1000
+/run/beamOn 1001
