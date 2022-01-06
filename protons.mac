@@ -12,5 +12,5 @@
 # Print to screen progress of run every 10 events
 /run/printProgress 10
 
-# One thousand protons will be generated
+# One hundred protons will be generated
 /run/beamOn 100
