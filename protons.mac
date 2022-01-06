@@ -9,7 +9,7 @@
 # Set the beam particle energy
 /gun/energy 100 MeV
 
-# Print to screen progress of run every 100 events
+# Print to screen progress of run every 10 events
 /run/printProgress 10
 
 # One thousand protons will be generated
