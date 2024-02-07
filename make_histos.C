@@ -88,9 +88,7 @@ void make_histos(){
     
     hZR->Fill(Z/10,sqrt(X*X+Y*Y)/10,Edep);
     
-    // Apply a cut on the Z position
-    if( (Z/10) < 15. )
-      hZXY->Fill(Z/10.,X/10.,Y/10.,Edep);
+    hZXY->Fill(Z/10.,X/10.,Y/10.,Edep);
   }
  
   // Create a canvas to draw on
