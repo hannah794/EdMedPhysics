@@ -35,6 +35,7 @@
 #include "G4RunManager.hh"
 #include "G4UnitsTable.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4RootAnalysisManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -47,7 +48,7 @@ EdMedPhRunAction::EdMedPhRunAction()
   // Create analysis manager
   // The choice of analysis technology is done via selectin of a namespace
   // in EdMedPhAnalysis.hh
-  auto analysisManager = G4AnalysisManager::Instance();
+  auto analysisManager = G4RootAnalysisManager::Instance();
   G4cout << "Using " << analysisManager->GetType() << G4endl;
 
   // Create directories 
@@ -81,7 +82,7 @@ EdMedPhRunAction::EdMedPhRunAction()
 
 EdMedPhRunAction::~EdMedPhRunAction()
 {
-  delete G4AnalysisManager::Instance();  
+  delete G4RootAnalysisManager::Instance();  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -92,7 +93,7 @@ void EdMedPhRunAction::BeginOfRunAction(const G4Run* /*run*/)
   //G4RunManager::GetRunManager()->SetRandomNumberStore(true);
   
   // Get analysis manager
-  auto analysisManager = G4AnalysisManager::Instance();
+  auto analysisManager = G4RootAnalysisManager::Instance();
 
   // Open an output file
   //
@@ -106,7 +107,7 @@ void EdMedPhRunAction::EndOfRunAction(const G4Run* /*run*/)
 {
   // print histogram statistics
   //
-  auto analysisManager = G4AnalysisManager::Instance();
+  auto analysisManager = G4RootAnalysisManager::Instance();
   //if ( analysisManager->GetH1(1) ) {
   if ( analysisManager->GetH1(0) ) {
     G4cout << G4endl << " ----> print histograms statistic ";

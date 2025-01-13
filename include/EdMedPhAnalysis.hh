@@ -31,7 +31,7 @@
 #ifndef EdMedPhAnalysis_h
 #define EdMedPhAnalysis_h 1
 
-#include "g4root.hh"
+//#include "g4root.hh"
 //#include "g4cvs.hh"
 //#include "g4xml.hh"
 

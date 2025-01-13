@@ -34,6 +34,7 @@
 #include "G4ThreeVector.hh"
 #include "G4SDManager.hh"
 #include "G4ios.hh"
+#include "G4RootAnalysisManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -82,7 +83,7 @@ G4bool EdMedPhcCalorimeterSD::ProcessHits(G4Step* step,
   // energy deposit
   auto edep = step->GetTotalEnergyDeposit();
 
-  auto analysisManager = G4AnalysisManager::Instance();
+  auto analysisManager = G4RootAnalysisManager::Instance();
   if(0.0 < edep) {
 
     G4ThreeVector p1 = step->GetPreStepPoint()->GetPosition();
