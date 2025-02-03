@@ -58,7 +58,7 @@ class EdMedPhRunAction : public G4UserRunAction
 {
   public:
     EdMedPhRunAction();
-    virtual ~EdMedPhRunAction();
+    virtual ~EdMedPhRunAction() = default;
 
     virtual void BeginOfRunAction(const G4Run*);
     virtual void   EndOfRunAction(const G4Run*);

@@ -80,13 +80,6 @@ EdMedPhRunAction::EdMedPhRunAction()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-EdMedPhRunAction::~EdMedPhRunAction()
-{
-  delete G4RootAnalysisManager::Instance();  
-}
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 void EdMedPhRunAction::BeginOfRunAction(const G4Run* /*run*/)
 { 
   //inform the runManager to save random number seed
