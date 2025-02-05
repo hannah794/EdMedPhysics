@@ -29,6 +29,12 @@
 #
 # Draw geometry:
 /vis/drawVolume
+/vis/viewer/set/style surface
+/vis/geometry/set/colour AbsoLV 0 0 255 255 0.10 # Cyan, 10% opaque
+/vis/geometry/set/visibility World 0 false
+/vis/geometry/set/visibility GapLV 0 false
+/vis/geometry/set/visibility Layer 0 false
+/vis/geometry/set/visibility Calorimeter 0 false
 #
 # Specify view angle:
 /vis/viewer/set/viewpointThetaPhi 90. 180.
